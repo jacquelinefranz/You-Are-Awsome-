@@ -8,21 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // MARK: - IBOutlet
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
+    
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("⚡️ View Load")
+
     }
 
+    // MARK: - IBActions
     @IBAction func messageButton(_ sender: UIButton) {
         messageLabel.text = "You Are Awsome!"
         messageLabel.textColor = .blue
-    }
-    @IBAction func anotherMessageButton(_ sender: UIButton) {
-        messageLabel.text = "You're great!"
-        messageLabel.textColor = .red
+        
+        imageView.image = UIImage(named: "image-1")
     }
     
 }

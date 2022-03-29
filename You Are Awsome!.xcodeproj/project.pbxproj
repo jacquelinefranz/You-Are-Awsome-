@@ -60,8 +60,8 @@
 				8F92123227DBE8B000AD35F1 /* SceneDelegate.swift */,
 				8F92123427DBE8B000AD35F1 /* ViewController.swift */,
 				8F92123627DBE8B000AD35F1 /* Main.storyboard */,
-				8F92123927DBE8B100AD35F1 /* Assets.xcassets */,
 				8F92123B27DBE8B100AD35F1 /* LaunchScreen.storyboard */,
+				8F92123927DBE8B100AD35F1 /* Assets.xcassets */,
 				8F92123E27DBE8B100AD35F1 /* Info.plist */,
 			);
 			path = "You Are Awsome!";

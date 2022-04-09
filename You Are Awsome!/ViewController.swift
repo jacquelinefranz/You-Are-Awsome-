@@ -22,10 +22,22 @@ class ViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction func messageButton(_ sender: UIButton) {
-        messageLabel.text = "You Are Awsome!"
-        messageLabel.textColor = .blue
+        let awesomeMessage = "You Are Awsome!"
+        let greateMessage = "You Are Greate!"
+        let bombMessage = "You Are the Bomb!"
         
-        imageView.image = UIImage(named: "image-1")
+        messageLabel.textColor = .purple
+        
+        if messageLabel.text == awesomeMessage {
+            messageLabel.text = greateMessage
+            imageView.image = UIImage(named: "image-1")
+        } else if messageLabel.text == greateMessage {
+            messageLabel.text = bombMessage
+            imageView.image = UIImage(named: "image-2")
+        } else {
+            messageLabel.text = awesomeMessage
+            imageView.image = UIImage(named: "image-0")
+        }
     }
     
 }

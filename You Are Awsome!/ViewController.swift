@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var imageNumber = 0
+    var messageNumber = 0
     
     // MARK: - Methods
     override func viewDidLoad() {
@@ -23,31 +24,24 @@ class ViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction func messageButton(_ sender: UIButton) {
+        let messages = ["You Are Awsome!",
+                        "You Are Greate!",
+                        "You Are the Bomb!"]
+
+        messageLabel.text = messages[messageNumber]
+        messageNumber += 1
+        if messageNumber == messages.count {
+            messageNumber = 0
+        }
         
-        print(imageNumber)
+        
         imageView.image = UIImage(named: "image-\(imageNumber)")
         imageNumber = imageNumber + 1
         
         if imageNumber == 3 {
             imageNumber = 0
         }
-        
-        //        let awesomeMessage = "You Are Awsome!"
-        //        let greateMessage = "You Are Greate!"
-        //        let bombMessage = "You Are the Bomb!"
-        //
-        //        messageLabel.textColor = .purple
-        //
-        //        if messageLabel.text == awesomeMessage {
-        //            messageLabel.text = greateMessage
-        //            imageView.image = UIImage(named: "image-1")
-        //        } else if messageLabel.text == greateMessage {
-        //            messageLabel.text = bombMessage
-        //            imageView.image = UIImage(named: "image-2")
-        //        } else {
-        //            messageLabel.text = awesomeMessage
-        //            imageView.image = UIImage(named: "image-0")
-        //        }
+
     }
     
 }
